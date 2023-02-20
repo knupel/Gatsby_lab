@@ -3,15 +3,16 @@ import { graphql } from "gatsby";
 
 import { Layout } from "./../components/struct/layout";
 
-function Contenu(props) {
-  const { frontmatter, html } = props.info;
-  return 
-  <>
-  <h1>{frontmatter.title}</h1>
-  <div dangerouslySetInnerHTML={{__html: html}}></div>
-  </>
-}
 
+function Contenu(props) {
+
+  const { frontmatter, html } = props.info;
+  return <>
+    <h1>{frontmatter.title}</h1>
+    <div dangerouslySetInnerHTML={{__html: html}}></div>
+  </>
+
+}
 
 export default function Generic({data}) {
   const { markdownRemark } = data;
